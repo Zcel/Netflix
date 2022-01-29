@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Netflix - Home</title>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     </head>
     <body>
 
@@ -37,14 +39,48 @@
         <div class="movies">
             <h1>Popular on Netflix</h1>
         </div>
-        <div class="movie-popular">
-            <a><img src="img/emily_in_paris.jpg"></a>
-            <a><img src="img/spiderman.webp"></a>
-            <a><img src="img/the-royal-treatment.jpg"></a>
-            <a><img src="img/dont_look_up.jpg"></a>
-            <a><img src="img/undercover.jpg"></a>
-            <a><img src="img/manifestt.webp"></a>
+        <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <a class="swiper-slide" href="movie.html"><img src="img/emily_in_paris.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/spiderman.webp"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/the-royal-treatment.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/dont_look_up.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/undercover.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/manifestt.webp"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/emily_in_paris.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/spiderman.webp"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/the-royal-treatment.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/dont_look_up.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/undercover.jpg"></a>
+          <a class="swiper-slide" href="movie.html"><img src="img/manifestt.webp"></a>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+  
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 6,
+          spaceBetween: 30,
+          slidesPerGroup: 3,
+          loop: false,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 
     </body>
 </html>
